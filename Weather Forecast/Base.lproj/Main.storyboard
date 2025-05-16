@@ -301,6 +301,7 @@
                         <outlet property="temperatureLabel" destination="4DJ-Eb-fU8" id="mCa-Bb-l6U"/>
                         <outlet property="timeLabel" destination="f84-fj-hv8" id="xp1-mt-k9a"/>
                         <outlet property="weatherDescriptionLabel" destination="YPQ-6C-6LB" id="YjF-MA-FvC"/>
+                        <outlet property="weatherIcon" destination="K1A-pf-7uC" id="JdX-8F-73q"/>
                         <outlet property="windSpeedLabel" destination="pvJ-ja-m7C" id="uww-vq-d3g"/>
                     </connections>
                 </viewController>
@@ -440,6 +441,9 @@
                                                         <segment title="English"/>
                                                         <segment title="Arabic"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="languageSegmentedControl:" destination="XHY-AJ-dyl" eventType="valueChanged" id="npt-Ie-eTs"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
@@ -466,6 +470,9 @@
                                                         <segment title="Standard"/>
                                                         <segment title="Imperial"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="unitSystemsSegmentedControl:" destination="XHY-AJ-dyl" eventType="valueChanged" id="5E4-LL-fbK"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
@@ -491,6 +498,9 @@
                                                         <segment title="Map"/>
                                                         <segment title="Gps"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="locationSegmentedControl:" destination="XHY-AJ-dyl" eventType="valueChanged" id="Iq4-Y3-Ltl"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
@@ -508,6 +518,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="ys5-ur-6UZ"/>
+                    <connections>
+                        <outlet property="languageSegmentControl" destination="q6g-05-NuZ" id="vde-fR-qeV"/>
+                        <outlet property="locationSegmentControl" destination="Uff-Ln-Q4I" id="9Ov-dq-whj"/>
+                        <outlet property="unitSystemsSegmentControl" destination="Mcw-Sx-NaX" id="cu2-EC-qgg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="spK-eT-Zww" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -519,7 +534,7 @@
         <image name="main_image" width="422" height="395"/>
         <image name="weather" width="100" height="100"/>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

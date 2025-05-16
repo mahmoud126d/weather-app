@@ -20,6 +20,13 @@
 		1EAB02792DCD432A00AD5CE2 /* Weather_ForecastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB02782DCD432A00AD5CE2 /* Weather_ForecastTests.swift */; };
 		1EAB02832DCD432A00AD5CE2 /* Weather_ForecastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB02822DCD432A00AD5CE2 /* Weather_ForecastUITests.swift */; };
 		1EAB02852DCD432A00AD5CE2 /* Weather_ForecastUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB02842DCD432A00AD5CE2 /* Weather_ForecastUITestsLaunchTests.swift */; };
+		22253AD82DD7CCA3002FC372 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 22253AD72DD7CCA3002FC372 /* Alamofire */; };
+		22253ADB2DD7CCD1002FC372 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 22253ADA2DD7CCD1002FC372 /* SDWebImageSwiftUI */; };
+		22253AE02DD7CD26002FC372 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22253ADF2DD7CD26002FC372 /* HomeViewModel.swift */; };
+		22253AE32DD7CD4E002FC372 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22253AE22DD7CD4E002FC372 /* NetworkManger.swift */; };
+		22253AE52DD7CD5C002FC372 /* NetworkMangerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22253AE42DD7CD5C002FC372 /* NetworkMangerProtocol.swift */; };
+		22253AE72DD7CDE4002FC372 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22253AE62DD7CDE4002FC372 /* WeatherModel.swift */; };
+		22253AE92DD7DCB6002FC372 /* UserDefaultManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22253AE82DD7DCB6002FC372 /* UserDefaultManger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +64,11 @@
 		1EAB027E2DCD432A00AD5CE2 /* Weather ForecastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Weather ForecastUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAB02822DCD432A00AD5CE2 /* Weather_ForecastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_ForecastUITests.swift; sourceTree = "<group>"; };
 		1EAB02842DCD432A00AD5CE2 /* Weather_ForecastUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_ForecastUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		22253ADF2DD7CD26002FC372 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		22253AE22DD7CD4E002FC372 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
+		22253AE42DD7CD5C002FC372 /* NetworkMangerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010NetworkMangerProtocol.swift"; sourceTree = "<group>"; };
+		22253AE62DD7CDE4002FC372 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		22253AE82DD7DCB6002FC372 /* UserDefaultManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultManger.swift; path = ../../../../Downloads/UserDefaultManger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22253ADB2DD7CCD1002FC372 /* SDWebImageSwiftUI in Frameworks */,
+				22253AD82DD7CCA3002FC372 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,9 +121,10 @@
 		1EAB025D2DCD432700AD5CE2 /* Weather Forecast */ = {
 			isa = PBXGroup;
 			children = (
+				22253AE12DD7CD3E002FC372 /* Model */,
+				22253ADC2DD7CD07002FC372 /* Home */,
 				1EAB025E2DCD432700AD5CE2 /* AppDelegate.swift */,
 				1EAB02602DCD432700AD5CE2 /* SceneDelegate.swift */,
-				1EAB02622DCD432700AD5CE2 /* ViewController.swift */,
 				1EAB02642DCD432700AD5CE2 /* Main.storyboard */,
 				1EAB026A2DCD432900AD5CE2 /* Assets.xcassets */,
 				1EAB026C2DCD432900AD5CE2 /* LaunchScreen.storyboard */,
@@ -139,6 +154,42 @@
 			path = "Weather ForecastUITests";
 			sourceTree = "<group>";
 		};
+		22253ADC2DD7CD07002FC372 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				22253ADE2DD7CD18002FC372 /* ViewModel */,
+				22253ADD2DD7CD0D002FC372 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		22253ADD2DD7CD0D002FC372 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22253ADE2DD7CD18002FC372 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				22253ADF2DD7CD26002FC372 /* HomeViewModel.swift */,
+				1EAB02622DCD432700AD5CE2 /* ViewController.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		22253AE12DD7CD3E002FC372 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22253AE82DD7DCB6002FC372 /* UserDefaultManger.swift */,
+				22253AE22DD7CD4E002FC372 /* NetworkManger.swift */,
+				22253AE42DD7CD5C002FC372 /* NetworkMangerProtocol.swift */,
+				22253AE62DD7CDE4002FC372 /* WeatherModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,6 +206,10 @@
 			dependencies = (
 			);
 			name = "Weather Forecast";
+			packageProductDependencies = (
+				22253AD72DD7CCA3002FC372 /* Alamofire */,
+				22253ADA2DD7CCD1002FC372 /* SDWebImageSwiftUI */,
+			);
 			productName = "Weather Forecast";
 			productReference = 1EAB025B2DCD432700AD5CE2 /* Weather Forecast.app */;
 			productType = "com.apple.product-type.application";
@@ -227,6 +282,10 @@
 				Base,
 			);
 			mainGroup = 1EAB02522DCD432700AD5CE2;
+			packageReferences = (
+				22253AD62DD7CCA3002FC372 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				22253AD92DD7CCD1002FC372 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 1EAB025C2DCD432700AD5CE2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -270,13 +329,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22253AE92DD7DCB6002FC372 /* UserDefaultManger.swift in Sources */,
 				1EAB02632DCD432700AD5CE2 /* ViewController.swift in Sources */,
 				1EAB025F2DCD432700AD5CE2 /* AppDelegate.swift in Sources */,
 				1E567DB32DCFA0FA0093F128 /* SettingsViewController.swift in Sources */,
+				22253AE52DD7CD5C002FC372 /* NetworkMangerProtocol.swift in Sources */,
+				22253AE02DD7CD26002FC372 /* HomeViewModel.swift in Sources */,
 				1EAB02612DCD432700AD5CE2 /* SceneDelegate.swift in Sources */,
 				1EAB02692DCD432700AD5CE2 /* Weather_Forecast.xcdatamodeld in Sources */,
+				22253AE32DD7CD4E002FC372 /* NetworkManger.swift in Sources */,
 				1E567DAF2DCF9E250093F128 /* HourlyTableViewController.swift in Sources */,
 				1E567DB12DCF9E2E0093F128 /* DailyTableViewController.swift in Sources */,
+				22253AE72DD7CDE4002FC372 /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +681,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		22253AD62DD7CCA3002FC372 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		22253AD92DD7CCD1002FC372 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		22253AD72DD7CCA3002FC372 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22253AD62DD7CCA3002FC372 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		22253ADA2DD7CCD1002FC372 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22253AD92DD7CCD1002FC372 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1EAB02672DCD432700AD5CE2 /* Weather_Forecast.xcdatamodeld */ = {
